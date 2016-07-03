@@ -9,7 +9,7 @@ class Header extends Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <Navigation className={s.nav}/>
+          <Navigation/>
           <div className={s.banner}>
             <h1 className={s.bannerTitle}>Service Aggregator</h1>
             <p className={s.bannerDesc}>The service aggregator between a client and a contractor</p>
