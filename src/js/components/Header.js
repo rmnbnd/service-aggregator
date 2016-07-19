@@ -1,18 +1,18 @@
 import React from "react";
+import Title from "./Header/Title";
 
 export default class Header extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
-            title: "Service Aggregator"
-        };
+    handleChange(e) {
+        const title = e.target.value;
+        this.props.changeTitle(title);
     }
 
     render() {
         return (
             <div>
-                <h1>{this.state.title}</h1>
+                <Title title={this.props.title}/>
+                <input value={this.props.title} onChange={this.handleChange.bind(this)}/>
             </div>
         );
     }
